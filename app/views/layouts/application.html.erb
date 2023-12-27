@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Postapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag 'navbar', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+     <%= render 'layouts/navbar' %>
+    </header>
+
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+  
+    <!-- Контент приложения -->
+    <div class="container mt-4">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

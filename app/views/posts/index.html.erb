@@ -1,0 +1,24 @@
+<div class="container">
+  <p class="alert alert-success"><%= notice %></p>
+
+  <h1>Посты</h1>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <%= render partial: "post", locals: { post: post } %>
+          <p class="card-text">
+            <%= link_to "Просмотреть пост", post, class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="mt-4">
+    <%= link_to "Создать новый пост", new_post_path, class: "btn btn-success" %>
+  </div>
+</div>
+
+

@@ -1,0 +1,28 @@
+<!-- app/views/posts/new.html.erb -->
+
+<div class="container">
+  
+  <h1>Новый пост</h1>
+
+  <%= form_with(model: @post, local: true) do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, 'Заголовок', class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :content, 'Содержание', class: 'form-label' %>
+      <%= form.text_area :content, class: 'form-control' %>
+    </div>
+
+    <div class="mt-3">
+      <%= form.submit "Сохранить", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
+  <div class="mt-3">
+    <%= link_to "Вернуться к просмотру постов", posts_path, class: "btn btn-secondary" %>
+  </div>
+</div>
+
+

@@ -1,0 +1,19 @@
+<!-- app/views/users/settings.html.erb -->
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="mb-4">Настройки пользователя</h1>
+
+      <%= form_for(current_user, url: user_path(current_user), method: :put, class: 'needs-validation', novalidate: true) do |f| %>
+        <div class="mb-3">
+          <%= f.label :digest_frequency, 'Настройка дайджеста', class: 'form-label' %>
+          <%= f.select :digest_frequency, User.digest_frequencies.keys, prompt: 'Выберите настройку', class: 'form-select' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.submit 'Обновить настройки', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

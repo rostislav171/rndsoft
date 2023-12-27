@@ -1,0 +1,38 @@
+<h1>Изменение поста</h1>
+
+<%= form_with(model: @post, url: post_path(@post), method: :patch, class: 'mt-4') do |form| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2><%= pluralize(@post.errors.count, "error") %> препятствуют сохранению этого поста:</h2>
+
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title, 'Заголовок', class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :content, 'Содержание', class: 'form-label' %>
+    <%= form.text_area :content, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "Сохранить изменения", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Просмотреть пост", @post, class: 'btn btn-secondary mr-2' %> |
+  <%= link_to "Вернуться к просмотру постов", posts_path, class: 'btn btn-secondary' %>
+</div>
+
+

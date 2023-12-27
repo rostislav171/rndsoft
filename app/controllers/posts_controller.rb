@@ -22,11 +22,13 @@ class PostsController < ApplicationController
   end
 
   # ОТПРАВИТЬ /posts или /posts.json
-  def create
+   def create
     @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
+        current_user.increment!(:posts_count)
+
         format.html { redirect_to post_url(@post), notice: 'Пост успешно создан.' }
         format.json { render :show, status: :created, location: @post }
       else

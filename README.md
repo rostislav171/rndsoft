@@ -1,24 +1,30 @@
-# README
+# Название моего проекта PostApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Веб-приложение представляет из себя среду где можно выставлять свои посты вместе с товарищами
+Сделано как тестовое задание в компанию RNDSOFT
 
-Things you may want to cover:
+## Требования
 
-* Ruby version
+- Ruby (версия 3.0.2)
+- Rails (версия 7.1.2)
 
-* System dependencies
+## Настройка
 
-* Configuration
+1. Склонируйте репозиторий: `git clone https://github.com/rostislav171/rndsoft.git`
+2. Перейдите в директорию проекта: `cd postapp`
+3. Установите гемы: `bundle install`
 
-* Database creation
+## База данных
 
-* Database initialization
+1. Создайте базу данных: `rails db:create`
+2. Примените миграции: `rails db:migrate`
 
-* How to run the test suite
+## Запуск приложения
 
-* Services (job queues, cache servers, search engines, etc.)
+Запустите локальный сервер: `rails server`
 
-* Deployment instructions
+Приложение будет доступно по адресу [http://127.0.0.1:3000]([http://127.0.0.1:3000](http://127.0.0.1:3000/users/sign_up).
 
-* ...
+## Тестирование
+
+Запустите тесты: `rails test`.

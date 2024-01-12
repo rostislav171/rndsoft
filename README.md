@@ -1,24 +1,38 @@
-# README
+# Postapp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Это приложение на Ruby on Rails.
+Создано как тестовое задание.
+Можно создавать пользователя редактировать данные, создвать посты редактировать их и смотреть статистику.
 
-Things you may want to cover:
+## Начало работы
 
-* Ruby version
+### Предварительные требования
 
-* System dependencies
+Убедитесь, что у вас установлены следующие компоненты:
 
-* Configuration
+- Ruby (версия 3.0.2)
+- Ruby on Rails (версия 7.1.2)
+- База данных SQLite3
 
-* Database creation
+### Установка
 
-* Database initialization
+1. Клонируйте репозиторий:
+   
+   git clone https://github.com/rostislav171/rndsoft.git
+   
+   cd rndsoft
 
-* How to run the test suite
+2. Установите зависимости:
+   bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Настройте базу данных:
+   rails db:create
+   rails db:migrate
 
-* Deployment instructions
+4. Запустите сервер Rails:
 
-* ...
+   rails server или rails s
+
+5. Запуск тестов:
+
+   rails test

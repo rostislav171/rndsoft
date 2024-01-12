@@ -23,16 +23,18 @@
    cd rndsoft
 
 2. Установите зависимости:
+   
    bundle install
 
-3. Настройте базу данных:
+4. Настройте базу данных:
+   
    rails db:create
    rails db:migrate
 
-4. Запустите сервер Rails:
+6. Запустите сервер Rails:
 
    rails server или rails s
 
-5. Запуск тестов:
+7. Запуск тестов:
 
    rails test
